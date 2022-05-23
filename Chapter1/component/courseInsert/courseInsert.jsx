@@ -1,14 +1,21 @@
 import { View, TextInput, Pressable } from "react-native";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { styles } from "./style";
 import Icon from "react-native-vector-icons/AntDesign"
+import uuid from "uuid-random";
+import {Context} from "../../context/Context"
 
-export default ({addCourses}) => {
+export default ({}) => {
+    const {state, dispatch}=useContext(Context);
     const [text, setText] = useState("");
 
     const onPress = () => {
         if("" !== text){
-            addCourses(text);
+            const newCourse = {
+                id : uuid(),
+                text: text,
+            }
+           dispatch({type:"ADD", payload: newCourse});
             setText("");
         }
     }
