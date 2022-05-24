@@ -8,13 +8,13 @@ import { Context } from "../../context/Context";
 export default ({}) => {
 
   const {state, dispatch} = useContext(Context);
-  const onPress = (course) => {
-    dispatch({type: "DEL",payload: course.id});
+  const onPress = (todo) => {
+    dispatch({type: "DEL",payload: todo.id});
   }
   return (
-    <View style={styles.courseList}>
+    <View style={styles.todoList}>
       <SwipeListView style={styles.list}
-        data={state.courses}
+        data={state.todos}
         renderItem={(data) => (
           <View style={styles.item}>
             <Text style={styles.text}>{data.item.text}</Text>

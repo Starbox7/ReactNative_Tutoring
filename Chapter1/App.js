@@ -3,8 +3,8 @@ import React from "react";
 import { StyleSheet, Text, SafeAreaView, View, ScrollView, Button } from "react-native";
 import {styles} from "./style";
 import User from "./component/user/User";
-import CourseList from "./component/courseList/CourseList";
-import CourseInsert from "./component/courseInsert/courseInsert";
+import CourseList from "./component/todoList/TodoList";
+import CourseInsert from "./component/todoInsert/todoInsert";
 import uuid from "uuid-random";
 import { ContextProvider } from "./context/Context";
 
@@ -18,8 +18,8 @@ export default function App() {
       <View style={styles.header}>
       </View>
       <User/>
-      <CourseInsert/>
-      <CourseList/>
+      <todoInsert/>
+      <TodoList/>
     </SafeAreaView>
     </ContextProvider>
   );

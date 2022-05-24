@@ -2,7 +2,7 @@ import { createContext, useReducer } from "react";
 import Reducer from "./Reducer";
 
 const INIT_STATE = {
-    courses: [{
+    todos: [{
         id: 1,
         text: "gender",
     }],

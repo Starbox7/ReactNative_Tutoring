@@ -1,16 +1,16 @@
 const Reducer = (state, action) => {
     switch (action.type){
         case "ADD":
-            const addedCourses = [...state.courses, action.payload];
+            const addedtodos = [...state.todos, action.payload];
             return{
                 ...state,
-                courses:addedCourses,
+                todos:addedTodos,
             };
             case "DEL":
-                const deletedCourses = state.courses.filter(course=>course.id !== action.payload);
+                const deletedCourses = state.todos.filter(todo=>todo.id !== action.payload);
                 return{
                     ...state,
-                    courses: deletedCourses,
+                    todos: deletedCourses,
                 }
 
             default:

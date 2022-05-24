@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  courseList: {
+  todoList: {
     width: "100%",
     flex: 8,
     alignItems: "center",
