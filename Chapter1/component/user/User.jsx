@@ -1,25 +1,22 @@
 import { View, Image, Text } from "react-native";
 import { styles } from "./style";
-import ProfileIMG from "./김범준.jpg";
+import Profile from "./Profile.jpg";
+import Icon from "react-native-vector-icons/AntDesign"
 
-export default () => {
-  const student = {
-    name: "김범준",
-    msg: "다스케테",
-    music: "IU - 라일락",
-  };
-
+export default ({student}) => {
   return (
-    <View style={styles.user}>
+		<View style={styles.user}>
       <View style={styles.userPicture}>
-        <Image source={ProfileIMG} resizeMode="contain" style={{width: "100%", height:"100%"}}/>
+        <Image style={styles.userprofile} source={Profile} resizeMode="contain"/>
       </View>
       <View style={styles.userInfo}>
-        <Text style={styles.userName}>{student.name}</Text>
+        <Text style={styles.username}>{student.name}</Text>
         <Text>{student.msg}</Text>
       </View>
       <View style={styles.userMusic}>
-        <Text style={styles.melon}>{student.music}</Text>
+        <Text style={styles.melon}>
+          {student.music}{" "}<Icon name={"caretright"}/>
+        </Text>
       </View>
     </View>
   );

@@ -1,46 +1,14 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-  todoList: {
-    width: "100%",
-    flex: 8,
-    alignItems: "center",
-  },
-
-  // courseItem: {
-  //   width: "100%",
-  //   borderColor: "#ddd",
-  //   borderBottomWidth: 1,
-  //   height: 50,
-  //   justifyContent: "center",
-  //   alignItems: "center",
-  // },
-  list: {
-    width: "100%",
-  },
-  item: {
-    justifyContent: "center",
-    alignItems: "center",
-    borderBottomWidth: 1,
-    borderBottomColor: "#ddd",
-    width: "100%",
-    flexDirection: "row",
-    backgroundColor: "#ffffff",
-  },
-  text: {
-    textAlign: "center",
-    fontSize: 40,
-  },
-  hidden: {
+  container: {
     flex: 1,
-    flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "flex-start",
     alignItems: "center",
+		width: "100%",
+		backgroundColor: "#fff",
   },
-  button: {
-    alignItems:"center",
-    justifyContent:"center",
-    width: 70,
+  list: {
+    width: "100%"
   }
-
 });
